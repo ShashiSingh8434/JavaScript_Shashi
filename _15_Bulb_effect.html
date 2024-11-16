@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Hello man</h1>
+        <div class="back color" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias culpa minima aperiam consequatur quaerat. Facilis, ea corrupti? Labore, accusamus delectus? Error, labore cum? Ab accusamus ipsam tempora tempore nisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugit commodi quasi recusandae consequatur eos accusamus necessitatibus velit minima corporis id cum explicabo deserunt, porro totam unde, sapiente eius. Asperiores.</div>
+    </div>
+</body>
+<style>
+    .back{
+        margin-left:450px;
+        margin-right:700px;
+        border-radius: 1000px;
+        color:transparent
+    }
+    .color{
+        background: yellow;
+        
+    }
+</style>
+<script>
+    let a = document.getElementsByTagName("div")[1]
+    a.addEventListener('mouseenter',() =>{a.classList.toggle("color")})
+    a.addEventListener('mouseleave',() =>{a.classList.toggle("color")})
+</script>
+</html>

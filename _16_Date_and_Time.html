@@ -3,34 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>Clock</title>
 </head>
 <body>
-    <nav class="navbar">
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-        <li>four</li>
-      </nav>
+    <div class="container lol" >
+        <h1>Clock</h1>
+        <button id="hour">hour</button>
+        <span> : </span>
+        <button id="min">min</button>
+        <span> : </span>
+        <button id="sec">sec</button>
+        <span> : </span>
+        <button id="m">am/pm</button>
+    </div>
 </body>
+<style>
+.lol{
+    margin-top: 20px;
+}
+</style>
+<script>
+    function settingTheTime(){
+        let a = new Date();
+        let cont = document.getElementsByTagName("button");
+        function _hour(){
+            return a.getHours()>12 ? (a.getHours())-12 : a.getHours() ;
+        }
+        function am_pm(){
+            return a.getHours()>12 ? "pm" : "am" ;
+        }
+        cont[0].innerText = _hour();
+        cont[1].innerText = a.getMinutes();
+        cont[2].innerText = a.getSeconds();
+        cont[3].innerText = am_pm();
+    }
+    setInterval(settingTheTime,500)
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script>
-    let a = document.getElementsByTagName("nav")
-    // a[0].firstElementChild.style.color = "red"
-
-    a[0].firstElementChild.style.color = "brown"
-    a[0].lastElementChild.style.color = "red"
-
-    let b = document.getElementsByTagName("li")
-    let arr = Array.from(b)
-    arr.forEach((i)=>{
-        i.style.background="cyan"
-    })
-    console.log("Hello")
-    console.log("Hello")
-</script>
 </html>

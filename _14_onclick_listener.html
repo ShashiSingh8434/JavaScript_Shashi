@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <button>one</button>
+    <button>two</button>
+    <button>three</button>
+    <button>four</button>
+</body>
+<script>
+    let a = document.getElementsByTagName("button")
+    a[0].addEventListener("mouseenter",()=>{a[0].innerText="Hello"})
+    a[0].addEventListener("mouseleave",()=>{a[0].innerText="One";a[0].style.background="red"})
+    a[1].addEventListener("mouseenter",()=>{a[1].innerText="Hello"})
+    a[1].addEventListener("mouseleave",()=>{a[1].innerText="Two"})
+    a[2].addEventListener("mouseenter",()=>{a[2].innerText="Hello"})
+    a[2].addEventListener("mouseleave",()=>{a[2].innerText="Three"})
+    a[3].addEventListener("mouseenter",()=>{a[3].innerText="Hello"})
+    a[3].addEventListener("mouseleave",()=>{a[3].innerText="Four"})
+    
+    
+</script>
+</html>
